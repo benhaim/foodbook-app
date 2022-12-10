@@ -1,0 +1,85 @@
+
+import axios from 'axios';
+import React, { useState } from "react";
+
+import 'font-awesome/css/font-awesome.min.css';
+import Slider from 'react-input-slider';
+
+const UploadAndDisplayImage = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  return (
+	  <div>
+      <p>add image screen</p>
+
+			<div>
+   		  <label>
+   		    dish type
+   		    <select>
+	 		 		 <option>	Entree     </option>
+	 		 		 <option>	Appetizer  </option>
+	 		 		 <option>	Soup       </option>
+	 		 		 <option>	Main Course</option>
+	 		 		 <option>	Salad      </option>
+	 		 		 <option>	Coffee     </option>
+	 		 		 <option>	Dessert    </option>
+	 		 		 <option>	Cocktail   </option>
+   		    </select>
+   		  </label>
+   		</div> 
+      <br /> 
+
+			<input type="text" placeholder="restaurant name"/>
+      <br /> 
+      <br /> 
+
+			<input type="text" placeholder="dish name"/>
+      <br /> 
+      <br /> 
+
+			<div>
+   		  <label>
+   		    food type
+   		    <select>
+	 		 		 <option value="vegan">				vegan      </option>
+	 		 		 <option value="vegetarian">	vegetarian </option>
+	 		 		 <option value="fish">				fish       </option>
+	 		 		 <option value="seafood">			seafood    </option>
+	 		 		 <option value="pasta">				pasta      </option>
+	 		 		 <option value="bakery">			bakery     </option>
+	 		 		 <option value="meat">				meat       </option>
+	 		 		 <option value="street food">	street food</option>
+	 		 		 <option value="sharing">			sharing    </option>
+	 		 		 <option value="finger food">	finger food</option>
+   		    </select>
+   		  </label>
+   		</div> 
+      <br /> 
+
+			<Slider axis="x" defaultValue={0} disabled={false} max={3} style={{width:"100px"}}/>
+			<input type="checkbox"/>
+		  share to IG
+			<br />
+
+			<div style={{width:"250px",height:"250px",border:"1px solid black"}}>
+				<i className="fa fa-camera">
+				<input type="file" name="myImage" onChange={(event) => {setSelectedImage(event.target.files[0]);}}/>
+				</i>
+				{selectedImage ? (
+					<div>
+						<img alt="not fount" width={"250px"} height={"250px"} src={URL.createObjectURL(selectedImage)} />
+					</div>
+				) : (
+					<div>
+						image place holder here
+					</div>
+				)}
+			</div>
+      <br />
+
+     <button type="button">add</button> 			
+    </div>
+  );
+};
+
+export default UploadAndDisplayImage;
