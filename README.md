@@ -1,6 +1,7 @@
 # FoodBook App
 
 Foodbook is a social networking platform specifically designed for sharing images of restaurant dishes. It was developed using the `MERN-STACK`.
+The application is a web app developed for mobile devices experience. In your next visit to a decent restaurant, try it on your mobile!
 
 ### => [Working Project](https://foodbook.onrender.com)
 
@@ -24,7 +25,7 @@ Are you tired of trying to decide what to order at a restaurant, but don't have 
 ## Features
 
 Browse through a diverse collection of restaurant dishes
-Search for specific dishes or restaurants
+Search for specific dishes, foods or restaurants
 Share your own photos of restaurant dishes
 Discover new and exciting dishes from restaurants near you
 
